@@ -115,3 +115,52 @@ increasePopulation(city: rochester)
 print("Rochester population: \(rochester.population)")
 
 print(roc.population)
+
+
+// var versus let in structs and classes
+
+struct Person {
+    var name: String
+    var age: Double
+}
+
+let me = Person(name: "Ahava", age: 16)
+me.age = 17
+
+print(me.age)
+
+class Person2 {
+    var name: String
+    var age: Double
+    
+    init(name: String, age: Double) {
+        self.name = name
+        self.age = age
+    }
+}
+
+let me2 = Person2(name: "AhavaM", age: 16)
+me2.age = 29
+
+class Vacuum {
+    var isOn: Bool = false
+    var isPluggedIn: Bool = false
+    var rugHeight: Int = 5
+    var isSelfDriving: Bool
+    var attachments: [String]
+    
+    init(isSelfDriving: Bool = false, attachments: [String] = []) {
+        self.isSelfDriving = isSelfDriving
+        self.attachments = attachments
+    }
+}
+
+let sharkVacuum = Vacuum(isSelfDriving: false, attachments: ["Dusting Brush", "Crevice Tool"])
+
+let roombaVacuum = Vacuum(isSelfDriving: true)
+print(roombaVacuum)
+
+
+
+
+
