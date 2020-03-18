@@ -58,3 +58,60 @@ let margarita = Pizza(name: "Margarita Seniorita", cost: 16.99, category: .glute
 johnnyPizzaPlace.add(pizza: hawaiianClassic)
 johnnyPizzaPlace.add(pizza: chickenAlfredo)
 johnnyPizzaPlace.add(margarita)
+
+// Difference between Value Types and Referance Types
+
+// Struct = Value Type
+struct Ticket {
+    
+}
+
+var ticket = Ticket(name: "Bob")
+print(ticket.name)
+
+var ticketCopy = ticket
+
+ticketCopy.name = "Johnny"
+
+print("ticket: \(ticket.name))")
+print("ticketCopy: \(ticketCopy.name)")
+
+func changeTicketName(ticket: Ticket) {
+    var updatedTicket = ticket
+    updatedTicket.name = "John"
+    print("updatedTicket: \(updatedTicket.name)")
+}
+
+print("Ticket: \(ticket.name)")
+changeTicketName(ticket: ticket)
+print("Ticket: \(ticket.name)")
+
+
+// Referance Types: class
+
+class City {
+    var name: String
+    var population: Int
+    
+    init(name: String, population: Int) {
+        self.name = name
+        self.population = population
+    }
+}
+
+let rochester = City(name: "Rochester, NY", population: 208_000
+let roc = rochester
+roc.name = "ROC"
+
+print("rochester: \(rochester.name)")
+print("roc: \(roc.name)")
+
+func increasePopulation(city: City) {
+    city.population = city.population + 1
+}
+
+print("Rochester population: \(rochester.population)")
+increasePopulation(city: rochester)
+print("Rochester population: \(rochester.population)")
+
+print(roc.population)
