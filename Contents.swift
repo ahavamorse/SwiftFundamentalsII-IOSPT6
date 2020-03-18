@@ -34,7 +34,7 @@ print("I would like to order a \(myPizza.name)")
 class PizzaPlace {
     var name: String
     var address: String
-    var pizzas: [Pizza]
+    private(set) var pizzas: [Pizza]
     
     // Create Initializer
     init(name: String, address: String) {
@@ -42,6 +42,19 @@ class PizzaPlace {
         self.address = address
         self.pizzas = []
     }
+    
+    func add(Pizza) {
+        pizzas.append(pizza)
+        
+    }
 }
 
 let johnnyPizzaPlace = PizzaPlace(name: "Johnny's Pizza", address: "123 Delicious Ave")
+
+let hawaiianClassic = Pizza(name: "Hawaiian Classic", cost: 12.99, category: .classic)
+let chickenAlfredo = Pizza(name: "Call Me Mr. Alfredo", cost: 15.99, category: .specialty)
+let margarita = Pizza(name: "Margarita Seniorita", cost: 16.99, category: .glutenFree)
+
+johnnyPizzaPlace.add(pizza: hawaiianClassic)
+johnnyPizzaPlace.add(pizza: chickenAlfredo)
+johnnyPizzaPlace.add(margarita)
