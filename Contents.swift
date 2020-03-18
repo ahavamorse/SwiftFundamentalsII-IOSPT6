@@ -191,6 +191,17 @@ func calculateTip(totalString: String) {
 calculateTip(totalString: "200")
 calculateTip(totalString: "abc")
 
+var yearsOld: Int? = 16
 
+if yearsOld != nil {
+    let approximateDaysOld = 365 * yearsOld!
+    print("Wow! You are \(approximateDaysOld) days old.")
 
+}
 
+if let yearsOld = yearsOld {
+    let approximateDaysOld = 365 * yearsOld
+    print("Wow! You are \(approximateDaysOld) days old.")
+} else {
+    print("you don't have an age")
+}
