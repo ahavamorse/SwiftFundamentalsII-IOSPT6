@@ -1,3 +1,12 @@
 import UIKit
 
-var str = "Hello, playground"
+// Enum - Enumeration
+
+enum AppleProducts: String {
+    case iPhone
+    case iPad
+    case macBook
+    case watch = "Apple Watch"
+}
+
+
