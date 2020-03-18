@@ -160,6 +160,36 @@ let sharkVacuum = Vacuum(isSelfDriving: false, attachments: ["Dusting Brush", "C
 let roombaVacuum = Vacuum(isSelfDriving: true)
 print(roombaVacuum)
 
+// Optionals
+
+var myCar: String? = nil
+
+myCar = "Subaru"
+
+myCar = nil
+
+myCar = "Tesla"
+
+myCar = "Toyota Sienna"
+
+let weight = Int("123")
+print(weight)
+
+// Use an if let statement to unwrap an optional value
+let subtotalString = "58.95"
+
+func calculateTip(totalString: String) {
+    if let subtotal = Float(totalString) {
+        let tip = subtotal * 0.20
+        let total = subtotal + tip
+        print("Total: \(total)\n\tsubtotal:\(subtotal)\n\ttip:\(tip)")
+    } else {
+        print("\(totalString) is not a valid amount")
+    }
+}
+
+calculateTip(totalString: "200")
+calculateTip(totalString: "abc")
 
 
 
